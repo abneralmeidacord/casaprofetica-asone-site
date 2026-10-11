@@ -1,19 +1,18 @@
-import Link from "next/link";
+import { getContent } from "@/lib/content.mjs";
 import "./globals.css";
 
-export const metadata = {
-  title: { default: "Lab React + Next.js + MDX", template: "%s | Lab MDX" },
-  description: "Laboratório de React, Next.js e MDX com o contrato de conteúdo do Webtech Editor.",
-};
+export async function generateMetadata() {
+  const home = await getContent("paginas", "inicio");
+  const title = home?.frontmatter.title || "Casa Profética AS ONE";
+  return { title: { default: title, template: `%s | ${title}` }, description: home?.frontmatter.lead };
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
-        <header><nav className="container" aria-label="Principal"><Link href="/">Webtech / Lab MDX</Link></nav></header>
-        <main id="conteudo" className="container">{children}</main>
-        <footer className="container">React, Next.js e conteúdo versionado.</footer>
+        <main id="conteudo" tabIndex={-1}>{children}</main>
       </body>
     </html>
   );

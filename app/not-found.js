@@ -1,5 +1,6 @@
 import Link from "next/link";
+import Header from "@/components/Header";
 
 export default function NotFound() {
-  return <><h1>Página não encontrada</h1><p>Confira o slug e se o arquivo MDX existe na coleção.</p><Link href="/">Voltar ao início</Link></>;
+  return <><Header solid /><div className="editorial-page container"><h1>Página não encontrada</h1><p>O endereço que você procurou não está disponível.</p><Link href="/">Voltar ao início</Link></div></>;
 }

@@ -8,7 +8,34 @@
       "fields": [
         { "name": "title", "label": "Título", "widget": "string" },
         { "name": "lead", "label": "Abertura", "widget": "text" },
+        { "name": "homeTitle", "label": "Título da apresentação na home", "widget": "string" },
+        { "name": "welcome", "label": "Boas-vindas", "widget": "string" },
+        { "name": "churchName", "label": "Nome da igreja", "widget": "string" },
+        { "name": "brandName", "label": "Nome em destaque", "widget": "string" },
+        { "name": "heroImage", "label": "Imagem de boas-vindas", "widget": "image" },
+        { "name": "teamTitle", "label": "Título da equipe", "widget": "string" },
+        { "name": "locationTitle", "label": "Título da localização", "widget": "string" },
+        { "name": "serviceSchedule", "label": "Horários dos cultos", "widget": "string" },
+        { "name": "address", "label": "Endereço", "widget": "string" },
+        { "name": "locationImage", "label": "Fundo da localização", "widget": "image" },
+        { "name": "mapImage", "label": "Imagem do mapa", "widget": "image" },
+        { "name": "mapAlt", "label": "Descrição do mapa", "widget": "string" },
+        { "name": "mapsUrl", "label": "Link do Google Maps", "widget": "string" },
         { "name": "body", "label": "Conteúdo", "widget": "markdown" }
+      ]
+    },
+    {
+      "id": "equipe",
+      "label": "Pastores e equipe",
+      "folder": "content/equipe",
+      "extension": "mdx",
+      "fields": [
+        { "name": "name", "label": "Nome", "widget": "string" },
+        { "name": "position", "label": "Cargo", "widget": "string" },
+        { "name": "image", "label": "Retrato", "widget": "image" },
+        { "name": "alt", "label": "Descrição do retrato", "widget": "string" },
+        { "name": "order", "label": "Ordem de exibição", "widget": "number" },
+        { "name": "body", "label": "Biografia", "widget": "markdown" }
       ]
     }
   ]
