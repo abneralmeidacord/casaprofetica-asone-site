@@ -154,13 +154,22 @@ export default async function Home() {
             </div>
             <div className="visit__map">
               <div className="visit__map-image">
-                <Image
+                {/*<Image
                   src={info.mapImage}
                   alt={info.mapAlt}
                   width={1167}
                   height={1041}
                   sizes="(max-width: 760px) 90vw, 584px"
-                />
+                />*/}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.797324477327!2d-44.7624639!3d-20.43242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa0930029aac857%3A0x7872e62610fcd7b1!2sCasa%20Prof%C3%A9tica%20AS%20ONE!5e0!3m2!1spt-BR!2sbr!4v1791687532159!5m2!1spt-BR!2sbr"
+                  width="600"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                ></iframe>
               </div>
               <a
                 className="outline-button"
