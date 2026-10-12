@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import PastorCard from "@/components/PastorCard";
+import ConnectCard from "@/components/ConnectCard";
 import EditorialContent from "@/components/EditorialContent";
 import { getContent, listContent } from "@/lib/content.mjs";
 
@@ -17,10 +18,11 @@ export async function generateMetadata() {
 }
 
 export default async function Home() {
-  const [home, church, team] = await Promise.all([
+  const [home, church, team, connects] = await Promise.all([
     getContent("paginas", "inicio"),
     getContent("paginas", "quem-somos"),
     listContent("equipe"),
+    listContent("connects"),
   ]);
   // A home precisa destes dois documentos; a equipe pode estar vazia.
   if (!home || !church) notFound();
@@ -52,6 +54,13 @@ export default async function Home() {
         id="quem-somos"
         aria-labelledby="about-title"
       >
+        {connects.length ? (
+          connects.map((document) => (
+            <ConnectCard key={document.slug} document={document} />
+          ))
+        ) : (
+          <p>Nenhum Connect cadastrado.</p>
+        )}
         <Image
           className="about__watermark"
           src="/images/logos/Grafismo-branco-casa.png"
