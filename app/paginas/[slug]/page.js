@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import EditorialContent from "@/components/EditorialContent";
+import Connects from "./connects";
 import { getContent, listContent } from "@/lib/content.mjs";
 
 export async function generateStaticParams() {
@@ -18,14 +19,16 @@ export default async function Page({ params }) {
   const { slug } = await params;
   const doc = await getContent("paginas", slug);
   if (!doc) notFound();
+  const isConnects = slug === "connects";
   return (
     <>
-      <Header solid />
-      <article className="editorial-page container">
-        <Link href="/" className="back-link">← Voltar ao início</Link>
+      <Header solid={!isConnects} light={isConnects} activePage={slug} />
+      <article className={`${isConnects ? "connects-page" : "editorial-page"} container`}>
+        {!isConnects && <Link href="/" className="back-link">← Voltar ao início</Link>}
         <h1>{doc.frontmatter.title}</h1>
-        <p className="lead">{doc.frontmatter.lead}</p>
+        {!isConnects && <p className="lead">{doc.frontmatter.lead}</p>}
         <EditorialContent source={doc.content} />
+        {isConnects && <Connects />}
       </article>
     </>
   );

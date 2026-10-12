@@ -1,23 +1,9 @@
 import Image from "next/image";
-
-const categories = {
-  jvs: "Jovens",
-  adls: "Adolescentes",
-  young_adults: "Jovens Adultos",
-  adults: "Adultos",
-  family: "Famílias",
-  women: "Mulheres",
-  men: "Homens",
-  children: "Crianças",
-};
+import { getConnectCategories } from "@/lib/connects.mjs";
 
 export default function ConnectCard({ document }) {
   const { frontmatter } = document;
-  const cardCategories = Array.isArray(frontmatter.category)
-    ? frontmatter.category
-    : frontmatter.category
-      ? [frontmatter.category]
-      : [];
+  const cardCategories = getConnectCategories(frontmatter.category);
   return (
     <article className="connect-card">
       <Image
@@ -26,8 +12,11 @@ export default function ConnectCard({ document }) {
         alt={frontmatter.alt}
         width={360}
         height={200}
-        objectFit="cover"
-        style={{ borderTopLeftRadius: "16px", borderTopRightRadius: "16px" }}
+        style={{
+          borderTopLeftRadius: "16px",
+          borderTopRightRadius: "16px",
+        }}
+        sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 900px) 45vw, 360px"
       />
       <div className="connect-card-content">
         <h4>{frontmatter.name}</h4>
@@ -36,12 +25,12 @@ export default function ConnectCard({ document }) {
         </div>
         <div className="connect-card-category-container">
           {cardCategories.map((category) => {
-            const label = categories[category] || category;
+            const label = category;
             const color =
               label === "Jovens"
                 ? "var(--orange-asone)"
                 : label === "Adolescentes"
-                  ? "#23CC4B"
+                  ? "var(--green)"
                   : label === "Jovens Adultos"
                     ? "var(--yellow-asone)"
                     : label === "Mulheres"
@@ -49,7 +38,7 @@ export default function ConnectCard({ document }) {
                       : label === "Adultos"
                         ? "var(--black-asone)"
                         : label === "Famílias"
-                          ? "#00BEDD"
+                          ? "var(--cyan)"
                           : "var(--gray-asone)";
 
             return (

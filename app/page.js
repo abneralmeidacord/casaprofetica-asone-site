@@ -54,16 +54,6 @@ export default async function Home() {
         id="quem-somos"
         aria-labelledby="about-title"
       >
-        <section className="connects-grid">
-          {connects.length ? (
-            connects.map((document) => (
-              <ConnectCard key={document.slug} document={document} />
-            ))
-          ) : (
-            <p>Nenhum Connect cadastrado.</p>
-          )}
-        </section>
-
         <Image
           className="about__watermark"
           src="/images/logos/Grafismo-branco-casa.png"
