@@ -555,10 +555,18 @@ code {
     border-radius: 8px;
 }
 
+.connects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
 .connect-card {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
     background: var(--white-asone);
     border-radius: 16px;
     width: 360px;
