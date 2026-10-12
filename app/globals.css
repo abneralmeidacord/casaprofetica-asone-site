@@ -605,6 +605,7 @@ code {
 .connect-card h4 {
     font-size: 28px;
     font-weight: bold;
+    line-height: normal;
     color: var(--black-asone);
     margin: 0;
 }
