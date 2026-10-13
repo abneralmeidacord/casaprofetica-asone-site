@@ -44,11 +44,12 @@
       "folder": "content/connects",
       "extension": "mdx",
       "fields": [
-        { "name": "title", "label": "Nome", "widget": "string" },
+        { "name": "name", "label": "Nome", "widget": "string" },
         { "name": "description", "label": "Descrição", "widget": "text" },
         { "name": "category", "label": "Público-alvo", "widget": "string" },
         { "name": "neighborhood", "label": "Bairro", "widget": "string" },
-        { "name": "day", "label": "Dia da Senaba", "widget": "string" },
+        { "name": "day", "label": "Dia da semana", "widget": "string" },
+        { "name": "whatsapp", "label": "WhatsApp (DDI + DDD + número)", "widget": "string" },
         { "name": "image", "label": "Imagem", "widget": "image" },
         { "name": "alt", "label": "Descrição da imagem", "widget": "string" },
         { "name": "body", "label": "Conteúdo", "widget": "markdown" }

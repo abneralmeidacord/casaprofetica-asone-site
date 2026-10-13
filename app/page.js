@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import PastorCard from "@/components/PastorCard";
-import ConnectCard from "@/components/ConnectCard";
 import EditorialContent from "@/components/EditorialContent";
 import { getContent, listContent } from "@/lib/content.mjs";
 
@@ -24,7 +23,6 @@ export default async function Home() {
     listContent("equipe"),
     listContent("connects"),
   ]);
-  // A home precisa destes dois documentos; a equipe pode estar vazia.
   if (!home || !church) notFound();
   const { frontmatter: info } = home;
   const pastors = [...team].sort(
