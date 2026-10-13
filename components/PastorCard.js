@@ -1,5 +1,6 @@
 import Image from "next/image";
 import EditorialContent from "./EditorialContent";
+import "./PastorCard.css";
 
 export default function PastorCard({ document }) {
   const { frontmatter, content } = document;

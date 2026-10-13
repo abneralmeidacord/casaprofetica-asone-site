@@ -4,6 +4,7 @@ import { useId, useState } from "react";
 import Image from "next/image";
 import ConnectCard from "@/components/ConnectCard";
 import { filterConnects, getConnectFilterOptions } from "@/lib/connects.mjs";
+import "./ConnectFilters.css";
 
 export default function ConnectFilters({ documents }) {
   const id = useId();

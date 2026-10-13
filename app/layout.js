@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content.mjs";
 import "./globals.css";
+import "./Layout.css";
 
 export async function generateMetadata() {
   const home = await getContent("paginas", "inicio");

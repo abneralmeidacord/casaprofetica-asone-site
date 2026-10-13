@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import EditorialContent from "@/components/EditorialContent";
 import { getContent, listContent } from "@/lib/content.mjs";
 import { getConnectWhatsAppUrl } from "@/lib/connects.mjs";
+import "./ConnectPage.css";
 
 export async function generateStaticParams() {
   return (await listContent("connects")).map(({ slug }) => ({ slug }));

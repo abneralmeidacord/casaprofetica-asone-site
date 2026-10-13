@@ -1,0 +1,104 @@
+.connect-detail {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.connect-detail-content {
+    padding: 32px;
+    background: var(--offwhite-asone);
+    border-radius: 0 0 16px 16px;
+
+}
+
+.connect-detail h1 {
+    margin-bottom: 40px;
+    color: var(--orange-asone);
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.connect-detail__image {
+    width: 100%;
+    height: (100% - 160px);
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0;
+}
+
+.connect-detail-content>.prose {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.connect-detail-content .prose>*+* {
+    margin-top: 24px;
+}
+
+.connect-detail__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    margin-top: 64px;
+    padding: 12px 32px;
+    border-radius: 16px;
+    background: var(--orange-asone);
+    color: var(--white-asone);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.connect-detail__button:hover {
+    background: #ce5e00;
+    transform: translateY(-2px);
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .connect-detail {
+        padding-block: 64px 80px;
+    }
+
+    .connect-detail h1 {
+        margin-bottom: 24px;
+    }
+
+    .connect-detail>.prose {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .connect-detail .prose>*+* {
+        margin-top: 24px;
+    }
+
+    .connect-detail__button {
+        min-height: 44px;
+        margin-top: 32px;
+        padding: 10px 24px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .connect-detail.container {
+        width: calc(100% - 40px);
+        padding-block: 48px 64px;
+    }
+
+    .connect-detail h1 {
+        font-size: 36px;
+    }
+
+    .connect-detail>.prose {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,59 @@
+.connects-page {
+    --connects-surface: #f6f2e8;
+    padding-block: 90px 62px;
+}
+
+.connects-page h1 {
+    color: var(--orange-asone);
+    font-size: 80px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.connects-page>.prose {
+    margin-top: 27px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+}
+
+.connects-page .connect-card {
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    .connects-page {
+        padding-top: 64px;
+    }
+
+    .connects-page h1 {
+        font-size: 64px;
+        line-height: 1.1;
+    }
+
+    .connects-page>.prose {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 600px) {
+    .connects-page.container {
+        width: calc(100% - 40px);
+        padding-block: 48px;
+    }
+
+    .connects-page h1 {
+        font-size: 48px;
+    }
+
+    .connects-page>.prose {
+        margin-top: 24px;
+        font-size: 18px;
+    }
+
+    .connects-page .connects-grid {
+        margin-top: 32px;
+    }
+}

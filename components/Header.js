@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "./Header.css";
 
 function NavigationLinks({ activePage }) {
   return <><Link href="/paginas/quem-somos" aria-current={activePage === "quem-somos" ? "page" : undefined}>QUEM SOMOS</Link><Link href="/paginas/ofertas" aria-current={activePage === "ofertas" ? "page" : undefined}>OFERTAS</Link><Link href="/paginas/connects" aria-current={activePage === "connects" ? "page" : undefined}>CONNECTS</Link></>;

@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import PastorCard from "@/components/PastorCard";
 import EditorialContent from "@/components/EditorialContent";
 import { getContent, listContent } from "@/lib/content.mjs";
+import "./Home.css";
 
 export async function generateMetadata() {
   const home = await getContent("paginas", "inicio");

@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import EditorialContent from "@/components/EditorialContent";
 import Connects from "./connects";
 import { getContent, listContent } from "@/lib/content.mjs";
+import "../../EditorialPage.css";
+import "./ConnectsPage.css";
 
 export async function generateStaticParams() {
   return (await listContent("paginas")).map(({ slug }) => ({ slug }));

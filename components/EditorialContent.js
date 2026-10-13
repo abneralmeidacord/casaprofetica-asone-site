@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Callout from "./Callout";
+import "./EditorialContent.css";
 
 // Somente conteúdo do repositório, revisado por pessoas autorizadas.
 export default function EditorialContent({ source }) {

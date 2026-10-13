@@ -1,3 +1,5 @@
+import "./Callout.css";
+
 export default function Callout({ title, children }) {
   return (
     <aside className="callout">

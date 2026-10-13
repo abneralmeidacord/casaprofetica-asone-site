@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getConnectCategories } from "@/lib/connects.mjs";
+import "./ConnectCard.css";
 
 export default function ConnectCard({ document }) {
   const { frontmatter } = document;

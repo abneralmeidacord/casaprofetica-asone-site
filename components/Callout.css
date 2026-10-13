@@ -1,0 +1,7 @@
+.callout {
+    margin-block: 32px;
+    padding: 24px;
+    background: #fff0d5;
+    border-left: 4px solid var(--orange-asone);
+    border-radius: 8px;
+}

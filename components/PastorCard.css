@@ -1,0 +1,77 @@
+.pastor-card {
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 100px;
+    min-height: 538px;
+}
+
+.pastor-card:last-child {
+    min-height: 504px;
+}
+
+.pastor-card__portrait {
+    width: 360px;
+    height: auto;
+}
+
+.pastor-card__content {
+    padding-top: 16px;
+}
+
+.pastor-card h3 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 70px;
+    letter-spacing: 0;
+}
+
+.pastor-card .prose {
+    margin-top: 44px;
+}
+
+@media (max-width: 1199px) {
+
+    .pastor-card {
+        grid-template-columns: 32% minmax(0, 1fr);
+        gap: 60px;
+        min-height: auto;
+    }
+
+    .pastor-card:last-child {
+        min-height: auto;
+    }
+
+    .pastor-card h3 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .pastor-card .prose {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .pastor-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .pastor-card__portrait {
+        width: min(100%, 360px);
+    }
+
+    .pastor-card__content {
+        padding-top: 0;
+    }
+
+    .pastor-card h3 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .pastor-card .prose {
+        margin-top: 24px;
+    }
+}
