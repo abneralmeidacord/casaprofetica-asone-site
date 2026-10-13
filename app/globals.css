@@ -427,6 +427,10 @@ summary:focus-visible {
     margin-top: 187px;
 }
 
+.visit__grid > * {
+    min-width: 0;
+}
+
 .visit__information h2 {
     max-width: 440px;
 }
@@ -458,6 +462,7 @@ summary:focus-visible {
     line-height: 1.22;
     font-style: normal;
     margin-left: 8px;
+    overflow-wrap: anywhere;
 }
 
 .visit__schedule {
@@ -482,6 +487,13 @@ summary:focus-visible {
 .visit__map-image img {
     width: 100%;
     height: auto;
+}
+
+.visit__map-image iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
 }
 
 .visit__map-image::after {
@@ -1255,7 +1267,7 @@ code {
     }
 
     .visit__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 48px;
         margin-top: 72px;
     }
@@ -1289,6 +1301,11 @@ code {
     .visit__map {
         padding-top: 0;
         gap: 20px;
+    }
+
+    .visit__map .outline-button {
+        width: 100%;
+        min-width: 0;
     }
 
     .editorial-page {
