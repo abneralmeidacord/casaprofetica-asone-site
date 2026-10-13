@@ -5,15 +5,25 @@ import "./Layout.css";
 export async function generateMetadata() {
   const home = await getContent("paginas", "inicio");
   const title = home?.frontmatter.title || "Casa Profética AS ONE";
-  return { title: { default: title, template: `%s | ${title}` }, description: home?.frontmatter.lead };
+  return {
+    title: { default: title, template: `%s | ${title}` },
+    description: home?.frontmatter.lead,
+    icons: {
+      icon: "/favicon.png",
+    },
+  };
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
       <body>
-        <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
-        <main id="conteudo" tabIndex={-1}>{children}</main>
+        <a className="skip-link" href="#conteudo">
+          Pular para o conteúdo
+        </a>
+        <main id="conteudo" tabIndex={-1}>
+          {children}
+        </main>
       </body>
     </html>
   );
