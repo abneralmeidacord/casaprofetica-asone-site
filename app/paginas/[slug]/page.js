@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import EditorialContent from "@/components/EditorialContent";
 import Connects from "./connects";
 import OffersPage from "./OffersPage";
+import AboutPage from "./AboutPage";
 import { getContent, listContent } from "@/lib/content.mjs";
 import "../../EditorialPage.css";
 import "./ConnectsPage.css";
@@ -22,6 +23,7 @@ export default async function Page({ params }) {
   const { slug } = await params;
   const doc = await getContent("paginas", slug);
   if (!doc) notFound();
+  if (slug === "quem-somos") return <AboutPage document={doc} />;
   if (slug === "ofertas") return <OffersPage document={doc} />;
   const isConnects = slug === "connects";
   return (
