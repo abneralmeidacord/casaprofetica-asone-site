@@ -13,6 +13,8 @@
         { "name": "churchName", "label": "Nome da igreja", "widget": "string" },
         { "name": "brandName", "label": "Nome em destaque", "widget": "string" },
         { "name": "heroImage", "label": "Imagem de boas-vindas", "widget": "image" },
+        { "name": "contributionTitle", "label": "Título das formas de contribuição", "widget": "string" },
+        { "name": "pixKey", "label": "Chave Pix", "widget": "string" },
         { "name": "teamTitle", "label": "Título da equipe", "widget": "string" },
         { "name": "locationTitle", "label": "Título da localização", "widget": "string" },
         { "name": "serviceSchedule", "label": "Horários dos cultos", "widget": "string" },
